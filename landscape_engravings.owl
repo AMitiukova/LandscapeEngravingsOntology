@@ -1,0 +1,1583 @@
+@prefix : <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix Титул: <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Титул/> .
+@prefix landscape_engravings: <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#> .
+@base <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings> .
+
+<http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings> rdf:type owl:Ontology ;
+                                                                                rdfs:comment "This is an ontology of English landscape prints from Catherine the Great collection as prototypes for Frog servise ordered by the empress form England and produced by J. Wedgwood and T. Bentley in 1773-1774."@en ,
+                                                                                             "Онтология создана для описания английских пейзажных гравюр середины XVIII в., послуживших прототипами для изображений на сервизе \"С зеленой лягушкой\", заказанном императрицей Екатериной II в Англии у известного мастера Джозайя Веджвуда в 1773-1774 гг."@ru .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7
+landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 rdf:type rdfs:Datatype ;
+                                                                      rdfs:comment "Defines a part of a date - the year (YYYY)" ;
+                                                                      rdfs:label "xsd:gYear"@en ;
+                                                                      owl:sameAs "https://www.w3.org/TR/xmlschema11-2/#gYear"^^xsd:anyURI .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230
+landscape_engravings:OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230 rdf:type owl:ObjectProperty ;
+                                                                            rdfs:subPropertyOf landscape_engravings:object ;
+                                                                            rdfs:domain landscape_engravings:objects_facet ;
+                                                                            rdfs:range landscape_engravings:landmarks ;
+                                                                            rdfs:label "depicts"@en ,
+                                                                                       "изображать"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLObjectProperty_60900da0_a02d_4b4e_b9c5_82b7b993a5d7
+landscape_engravings:OWLObjectProperty_60900da0_a02d_4b4e_b9c5_82b7b993a5d7 rdf:type owl:ObjectProperty ;
+                                                                            rdfs:subPropertyOf landscape_engravings:person ;
+                                                                            rdfs:domain landscape_engravings:people ;
+                                                                            rdfs:range landscape_engravings:geografical_obgects ;
+                                                                            rdfs:label "deathAt"@en ,
+                                                                                       "умеретьВ"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLObjectProperty_6cf450a8_5bce_425b_8448_f3e9d42abdff
+landscape_engravings:OWLObjectProperty_6cf450a8_5bce_425b_8448_f3e9d42abdff rdf:type owl:ObjectProperty ;
+                                                                            rdfs:subPropertyOf landscape_engravings:object ;
+                                                                            rdfs:domain landscape_engravings:objects_facet ;
+                                                                            rdfs:range landscape_engravings:people ;
+                                                                            rdfs:label "hasContributor"@en ,
+                                                                                       "иметьЗаказчика"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e
+landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e rdf:type owl:ObjectProperty ;
+                                                                            rdfs:subPropertyOf landscape_engravings:object ;
+                                                                            rdfs:domain landscape_engravings:landmarks ,
+                                                                                        landscape_engravings:organisations ;
+                                                                            rdfs:range landscape_engravings:geografical_obgects ;
+                                                                            rdfs:label "isPlacedAt"@en ,
+                                                                                       "находитьсяВ"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLObjectProperty_a403a7cf_aaae_4972_b5a0_35be8e70aac6
+landscape_engravings:OWLObjectProperty_a403a7cf_aaae_4972_b5a0_35be8e70aac6 rdf:type owl:ObjectProperty ;
+                                                                            rdfs:subPropertyOf landscape_engravings:person ;
+                                                                            rdfs:domain landscape_engravings:people ;
+                                                                            rdfs:range landscape_engravings:geografical_obgects ;
+                                                                            rdfs:label "beBornAt"@en ,
+                                                                                       "родитьсяВ"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLObjectProperty_ecc61776_28aa_4ebe_b257_23ea11b97b87
+landscape_engravings:OWLObjectProperty_ecc61776_28aa_4ebe_b257_23ea11b97b87 rdf:type owl:ObjectProperty ;
+                                                                            rdfs:subPropertyOf landscape_engravings:object ;
+                                                                            rdfs:domain landscape_engravings:series_of_prints ,
+                                                                                        landscape_engravings:servises ;
+                                                                            rdfs:range landscape_engravings:porcelain ,
+                                                                                       landscape_engravings:prints ;
+                                                                            rdfs:label "isPartOf"@en ,
+                                                                                       "бытьЧастью"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#creating
+landscape_engravings:creating rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf landscape_engravings:person ;
+                              rdfs:domain landscape_engravings:people ;
+                              rdfs:range landscape_engravings:objects_facet ;
+                              rdfs:label "creating"@en ,
+                                         "создать"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#design-build
+landscape_engravings:design-build rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf landscape_engravings:creating ;
+                                  rdfs:domain landscape_engravings:people ;
+                                  rdfs:range landscape_engravings:architectual_objects ,
+                                             landscape_engravings:parks_country_seats ;
+                                  rdfs:label "design-build"@en ,
+                                             "построить"@ru ;
+                                  owl:sameAs "http://vocab.getty.edu/page/aat/300150615"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#drawing
+landscape_engravings:drawing rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf landscape_engravings:creating ;
+                             rdfs:domain landscape_engravings:people ;
+                             rdfs:range landscape_engravings:drawings ;
+                             rdfs:label "drawing"@en ,
+                                        "нарисовать"@ru ;
+                             owl:sameAs "http://vocab.getty.edu/page/aat/300054196"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#engraving
+landscape_engravings:engraving rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf landscape_engravings:creating ;
+                               rdfs:domain landscape_engravings:people ;
+                               rdfs:range landscape_engravings:prints ;
+                               rdfs:label "engraving"@en ,
+                                          "гравировать"@ru ;
+                               owl:sameAs "http://vocab.getty.edu/page/aat/300053225"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#etching
+landscape_engravings:etching rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf landscape_engravings:creating ;
+                             rdfs:domain landscape_engravings:people ;
+                             rdfs:range landscape_engravings:prints ;
+                             rdfs:label "etching"@en ,
+                                        "создатьОфорт"@ru ;
+                             owl:sameAs "http://vocab.getty.edu/page/aat/300053840"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#hasContributor
+landscape_engravings:hasContributor rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf landscape_engravings:object ;
+                                    rdfs:domain landscape_engravings:manufacturies ;
+                                    rdfs:range landscape_engravings:people ;
+                                    rdfs:label "иметьУчастника"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#hasData
+landscape_engravings:hasData rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf landscape_engravings:иметьНадпись ;
+                             rdfs:domain landscape_engravings:prints ;
+                             rdfs:range landscape_engravings:DataDepicted ;
+                             rdfs:label "hasData"@en ,
+                                        "иметьДату"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#hasDedication
+landscape_engravings:hasDedication rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf landscape_engravings:иметьНадпись ;
+                                   rdfs:domain landscape_engravings:prints ;
+                                   rdfs:range landscape_engravings:dedication ;
+                                   rdfs:label "hasDedication"@en ,
+                                              "иметьПосвящение"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#hasTitle
+landscape_engravings:hasTitle rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf landscape_engravings:иметьНадпись ;
+                              rdfs:domain landscape_engravings:prints ;
+                              rdfs:range landscape_engravings:titles ;
+                              rdfs:label "hasTitle"@en ,
+                                         "иметьНазвание"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#is_source_of
+landscape_engravings:is_source_of rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf landscape_engravings:object ;
+                                  rdfs:domain landscape_engravings:drawings ,
+                                              landscape_engravings:paintings ,
+                                              landscape_engravings:prints ,
+                                              landscape_engravings:prototypes ;
+                                  rdfs:range landscape_engravings:porcelain ,
+                                             landscape_engravings:prints ;
+                                  rdfs:label "isSourceOf"@en ,
+                                             "бытьПрототипом"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#object
+landscape_engravings:object rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#painting
+landscape_engravings:painting rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf landscape_engravings:creating ;
+                              rdfs:domain landscape_engravings:people ;
+                              rdfs:range landscape_engravings:paintings ;
+                              rdfs:label "painting"@en ,
+                                         "писатьМаслом"@ru ;
+                              owl:sameAs "http://vocab.getty.edu/page/aat/300054216"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#person
+landscape_engravings:person rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#publishing
+landscape_engravings:publishing rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf landscape_engravings:creating ;
+                                rdfs:domain landscape_engravings:people ;
+                                rdfs:range landscape_engravings:prints ;
+                                rdfs:label "publish"@en ,
+                                           "опубликовать"@ru ;
+                                owl:sameAs "http://vocab.getty.edu/page/aat/300054686"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#бытьСозданнымВ
+landscape_engravings:бытьСозданнымВ rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf landscape_engravings:object ;
+                                    rdfs:domain landscape_engravings:objects_facet ;
+                                    rdfs:range landscape_engravings:geografical_obgects .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#бытьСозданнымИз
+landscape_engravings:бытьСозданнымИз rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf landscape_engravings:object ;
+                                     rdfs:domain landscape_engravings:objects_facet ;
+                                     rdfs:range landscape_engravings:materials .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#иметьАдрес
+landscape_engravings:иметьАдрес rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf landscape_engravings:иметьНадпись ;
+                                rdfs:domain landscape_engravings:prints ;
+                                rdfs:range landscape_engravings:imprints .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#иметьВладельца
+landscape_engravings:иметьВладельца rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf landscape_engravings:object ;
+                                    rdfs:domain landscape_engravings:architectual_objects ,
+                                                landscape_engravings:parks_country_seats ;
+                                    rdfs:range landscape_engravings:people ;
+                                    rdfs:label "hasProprieter"@en ,
+                                               "иметьВладельца"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#иметьГерб
+landscape_engravings:иметьГерб rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf landscape_engravings:иметьНадпись ;
+                               rdfs:domain landscape_engravings:prints ;
+                               rdfs:range landscape_engravings:coat_of_arms .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#иметьКопирайт
+landscape_engravings:иметьКопирайт rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf landscape_engravings:иметьНадпись ;
+                                   rdfs:domain landscape_engravings:prints ;
+                                   rdfs:range landscape_engravings:copyright .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#иметьНадпись
+landscape_engravings:иметьНадпись rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf landscape_engravings:object ;
+                                  rdfs:domain landscape_engravings:prints ;
+                                  rdfs:range landscape_engravings:information_form_components .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#иметьНомер
+landscape_engravings:иметьНомер rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf landscape_engravings:иметьНадпись ;
+                                rdfs:domain landscape_engravings:prints ;
+                                rdfs:range landscape_engravings:numerals .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#иметьОснователя
+landscape_engravings:иметьОснователя rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf landscape_engravings:object ;
+                                     rdfs:domain landscape_engravings:manufacturies ;
+                                     rdfs:range landscape_engravings:people .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#иметьПодпись
+landscape_engravings:иметьПодпись rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf landscape_engravings:иметьНадпись ;
+                                  rdfs:domain landscape_engravings:prints ;
+                                  rdfs:range landscape_engravings:signatures .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#проектироватьЛандшафт
+landscape_engravings:проектироватьЛандшафт rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf landscape_engravings:creating ;
+                                           rdfs:domain landscape_engravings:people ;
+                                           rdfs:range landscape_engravings:parks_country_seats ;
+                                           rdfs:label "landscapeGardening"@en ,
+                                                      "проектироватьЛандшафт"@ru ;
+                                           owl:sameAs "http://vocab.getty.edu/page/aat/300054708"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#произвести
+landscape_engravings:произвести rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf landscape_engravings:creating ;
+                                rdfs:domain landscape_engravings:manufacturies ;
+                                rdfs:range landscape_engravings:objects_facet .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#создатьПрототип
+landscape_engravings:создатьПрототип rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf landscape_engravings:creating .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#хранитьсяВ
+landscape_engravings:хранитьсяВ rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf landscape_engravings:object ;
+                                rdfs:domain landscape_engravings:objects_facet ;
+                                rdfs:range landscape_engravings:organisations .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Copyright
+landscape_engravings:Copyright rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf landscape_engravings:НадписиПодписиЗнаки ;
+                               rdfs:domain landscape_engravings:copyright ;
+                               rdfs:range xsd:string ;
+                               rdfs:label "Копирайт"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Data
+landscape_engravings:Data rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf landscape_engravings:НадписиПодписиЗнаки ;
+                          rdfs:domain landscape_engravings:DataDepicted ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Дата, изображенная на произведении"@ru ;
+                          rdfs:label "DataDepicted"@en ,
+                                     "ДатаНаПредмете"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Dedication
+landscape_engravings:Dedication rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf landscape_engravings:НадписиПодписиЗнаки ;
+                                rdfs:domain landscape_engravings:dedication ;
+                                rdfs:range xsd:string ;
+                                rdfs:label "Посвящение"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Number
+landscape_engravings:Number rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf landscape_engravings:НадписиПодписиЗнаки ;
+                            rdf:type owl:FunctionalProperty ;
+                            rdfs:domain landscape_engravings:numerals ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "Номер"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_0d0f34a0_d030_42f3_a4d9_5e7f3c25a3f4
+landscape_engravings:OWLDataProperty_0d0f34a0_d030_42f3_a4d9_5e7f3c25a3f4 rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:Предметные ;
+                                                                          rdf:type owl:FunctionalProperty ;
+                                                                          rdfs:domain landscape_engravings:objects_facet ;
+                                                                          rdfs:label "Форма"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_16df6be8_51ba_4576_8864_428c689924a5
+landscape_engravings:OWLDataProperty_16df6be8_51ba_4576_8864_428c689924a5 rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:OWLDataProperty_f5ebe372_555a_46c0_8edb_7d794878c35c ;
+                                                                          rdfs:domain landscape_engravings:objects_facet ;
+                                                                          rdfs:range xsd:float ;
+                                                                          rdfs:label "длина"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_1847e71e_6c9a_4c97_9bd5_8e00bd2bda03
+landscape_engravings:OWLDataProperty_1847e71e_6c9a_4c97_9bd5_8e00bd2bda03 rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:OWLDataProperty_0d0f34a0_d030_42f3_a4d9_5e7f3c25a3f4 ;
+                                                                          rdfs:domain landscape_engravings:porcelain ;
+                                                                          rdfs:range xsd:boolean ;
+                                                                          rdfs:label "треугольная"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_1a1a4c42_20b6_44c0_99eb_6d5307dcfddd
+landscape_engravings:OWLDataProperty_1a1a4c42_20b6_44c0_99eb_6d5307dcfddd rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:OWLDataProperty_f5ebe372_555a_46c0_8edb_7d794878c35c ;
+                                                                          rdfs:domain landscape_engravings:objects_facet ;
+                                                                          rdfs:range xsd:float ;
+                                                                          rdfs:label "ширина"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_2242489b_dbbe_4098_a97d_bdfa9e3dd2c2
+landscape_engravings:OWLDataProperty_2242489b_dbbe_4098_a97d_bdfa9e3dd2c2 rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:OWLDataProperty_0d0f34a0_d030_42f3_a4d9_5e7f3c25a3f4 ;
+                                                                          rdfs:domain landscape_engravings:porcelain ;
+                                                                          rdfs:range xsd:boolean ;
+                                                                          rdfs:label "овальная"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b
+landscape_engravings:OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:OWLDataProperty_638cff13_0900_437c_96f9_458c1e18e45f ;
+                                                                          rdf:type owl:FunctionalProperty ;
+                                                                          rdfs:range xsd:float ;
+                                                                          rdfs:label "lng"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_2b70ee2d_5201_49f8_9db8_dd5edb04e4b0
+landscape_engravings:OWLDataProperty_2b70ee2d_5201_49f8_9db8_dd5edb04e4b0 rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:OWLDataProperty_0d0f34a0_d030_42f3_a4d9_5e7f3c25a3f4 ;
+                                                                          rdfs:domain landscape_engravings:porcelain ;
+                                                                          rdfs:range xsd:boolean ;
+                                                                          rdfs:label "круглая"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee
+landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:Идентификаторы ;
+                                                                          rdf:type owl:FunctionalProperty ;
+                                                                          rdfs:domain landscape_engravings:objects_facet ;
+                                                                          rdfs:range xsd:string ;
+                                                                          rdfs:label "инвентарный номер"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_638cff13_0900_437c_96f9_458c1e18e45f
+landscape_engravings:OWLDataProperty_638cff13_0900_437c_96f9_458c1e18e45f rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:Географические ;
+                                                                          rdfs:label "Геокоординаты"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_8fc68b31_cbfc_487f_aae1_b268a8ccf2bc
+landscape_engravings:OWLDataProperty_8fc68b31_cbfc_487f_aae1_b268a8ccf2bc rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:Персональные ;
+                                                                          rdf:type owl:FunctionalProperty ;
+                                                                          rdfs:domain landscape_engravings:people ;
+                                                                          rdfs:range landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                          rdfs:label "Дата_рождения"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a
+landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:Идентификаторы ;
+                                                                          rdfs:domain landscape_engravings:servises ;
+                                                                          rdfs:range xsd:string ;
+                                                                          rdfs:label "каталожный номер"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_ae96adc7_e1dd_45d9_b234_14d11c786989
+landscape_engravings:OWLDataProperty_ae96adc7_e1dd_45d9_b234_14d11c786989 rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:OWLDataProperty_c397fff6_5428_4a4f_a2c3_e26eb3b2180f ;
+                                                                          rdfs:range landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                          rdfs:label "дата_перемещения"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_c397fff6_5428_4a4f_a2c3_e26eb3b2180f
+landscape_engravings:OWLDataProperty_c397fff6_5428_4a4f_a2c3_e26eb3b2180f rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:Предметные ;
+                                                                          rdf:type owl:FunctionalProperty ;
+                                                                          rdfs:label "Дата"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_c64012ae_d5a4_4c9b_92ee_3119555825b9
+landscape_engravings:OWLDataProperty_c64012ae_d5a4_4c9b_92ee_3119555825b9 rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:Персональные ;
+                                                                          rdf:type owl:FunctionalProperty ;
+                                                                          rdfs:domain landscape_engravings:people ;
+                                                                          rdfs:range landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                          rdfs:label "Дата_смерти"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa
+landscape_engravings:OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:OWLDataProperty_638cff13_0900_437c_96f9_458c1e18e45f ;
+                                                                          rdfs:range xsd:float ;
+                                                                          rdfs:label "lat"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_d50d203d_831e_44fd_a76d_0d7f09eb1cc6
+landscape_engravings:OWLDataProperty_d50d203d_831e_44fd_a76d_0d7f09eb1cc6 rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:OWLDataProperty_c397fff6_5428_4a4f_a2c3_e26eb3b2180f ;
+                                                                          rdf:type owl:FunctionalProperty ;
+                                                                          rdfs:domain landscape_engravings:objects_facet ;
+                                                                          rdfs:range landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                          rdfs:label "дата_создания"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_dbdeb50c_e021_434d_93dd_c5bc7161f608
+landscape_engravings:OWLDataProperty_dbdeb50c_e021_434d_93dd_c5bc7161f608 rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:OWLDataProperty_f5ebe372_555a_46c0_8edb_7d794878c35c ;
+                                                                          rdfs:domain landscape_engravings:objects_facet ;
+                                                                          rdfs:range xsd:float ;
+                                                                          rdfs:label "диаметр"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_f5ebe372_555a_46c0_8edb_7d794878c35c
+landscape_engravings:OWLDataProperty_f5ebe372_555a_46c0_8edb_7d794878c35c rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf landscape_engravings:Предметные ;
+                                                                          rdfs:domain landscape_engravings:objects_facet ;
+                                                                          rdfs:label "Размер"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Title
+landscape_engravings:Title rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf landscape_engravings:НадписиПодписиЗнаки ;
+                           rdfs:domain landscape_engravings:titles ;
+                           rdfs:range xsd:string ;
+                           rdfs:label "Название"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#hight
+landscape_engravings:hight rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf landscape_engravings:OWLDataProperty_f5ebe372_555a_46c0_8edb_7d794878c35c ;
+                           rdfs:domain landscape_engravings:objects_facet ;
+                           rdfs:range xsd:float ;
+                           rdfs:label "высота"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#max_data
+landscape_engravings:max_data rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf landscape_engravings:OWLDataProperty_c397fff6_5428_4a4f_a2c3_e26eb3b2180f ;
+                              rdfs:domain landscape_engravings:objects_facet ;
+                              rdfs:range landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                              rdfs:label "дата_по"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#min_data
+landscape_engravings:min_data rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf landscape_engravings:OWLDataProperty_c397fff6_5428_4a4f_a2c3_e26eb3b2180f ;
+                              rdfs:domain landscape_engravings:objects_facet ;
+                              rdfs:range landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                              rdfs:label "дата_с"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Адрес
+landscape_engravings:Адрес rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf landscape_engravings:НадписиПодписиЗнаки ;
+                           rdfs:domain landscape_engravings:imprints ;
+                           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Географические
+landscape_engravings:Географические rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Герб
+landscape_engravings:Герб rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf landscape_engravings:НадписиПодписиЗнаки ;
+                          rdfs:domain landscape_engravings:coat_of_arms ;
+                          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Идентификаторы
+landscape_engravings:Идентификаторы rdf:type owl:DatatypeProperty ;
+                                    rdfs:subPropertyOf landscape_engravings:Предметные .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Количество
+landscape_engravings:Количество rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf landscape_engravings:Предметные ;
+                                rdfs:domain landscape_engravings:series ;
+                                rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#НадписиПодписиЗнаки
+landscape_engravings:НадписиПодписиЗнаки rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf landscape_engravings:Предметные ;
+                                         rdfs:domain landscape_engravings:information_form_components .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Персональные
+landscape_engravings:Персональные rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Подпись
+landscape_engravings:Подпись rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf landscape_engravings:НадписиПодписиЗнаки ;
+                             rdf:type owl:FunctionalProperty ;
+                             rdfs:domain landscape_engravings:signatures ;
+                             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Предметные
+landscape_engravings:Предметные rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#дата_издания
+landscape_engravings:дата_издания rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf landscape_engravings:OWLDataProperty_c397fff6_5428_4a4f_a2c3_e26eb3b2180f ;
+                                  rdfs:domain landscape_engravings:prints ;
+                                  rdfs:range landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                  rdfs:label "date_of_publishing"@en ,
+                                             "дата_издания"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#квадратный
+landscape_engravings:квадратный rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf landscape_engravings:OWLDataProperty_0d0f34a0_d030_42f3_a4d9_5e7f3c25a3f4 ;
+                                rdfs:domain landscape_engravings:porcelain ;
+                                rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#прямоугольная
+landscape_engravings:прямоугольная rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf landscape_engravings:OWLDataProperty_0d0f34a0_d030_42f3_a4d9_5e7f3c25a3f4 ;
+                                   rdfs:domain landscape_engravings:porcelain ;
+                                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Титул/звание
+Титул:звание rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf landscape_engravings:Персональные ;
+             rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#DataDepicted
+landscape_engravings:DataDepicted rdf:type owl:Class ;
+                                  rdfs:subClassOf landscape_engravings:information_form_components ;
+                                  rdfs:label "DatesDepicted"@en ,
+                                             "ДатыНаПредмете"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#DesertPart
+landscape_engravings:DesertPart rdf:type owl:Class ;
+                                rdfs:subClassOf landscape_engravings:servises ;
+                                rdfs:label "ДесертнаяЧасть"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#DinnerPart
+landscape_engravings:DinnerPart rdf:type owl:Class ;
+                                rdfs:subClassOf landscape_engravings:servises ;
+                                rdfs:label "ОбеденнаяЧасть"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#architectual_objects
+landscape_engravings:architectual_objects rdf:type owl:Class ;
+                                          rdfs:subClassOf landscape_engravings:landmarks ;
+                                          rdfs:comment "castles, abbeys, priory, churches, ancient palaces"@en ,
+                                                       "замки, аббатства, приораты, церкви, средневековые дворцы"@ru ;
+                                          rdfs:label "architectural objects"@en ,
+                                                     "АрхитектурныеОбъекты"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#baskets
+landscape_engravings:baskets rdf:type owl:Class ;
+                             rdfs:subClassOf landscape_engravings:porcelain ;
+                             rdfs:label "Baskets"@en ,
+                                        "Корзинки"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#cities
+landscape_engravings:cities rdf:type owl:Class ;
+                            rdfs:subClassOf landscape_engravings:geografical_obgects ;
+                            rdfs:label "Города"@ru ,
+                                       "Сities"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#cityscapes
+landscape_engravings:cityscapes rdf:type owl:Class ;
+                                rdfs:subClassOf landscape_engravings:landmarks ;
+                                rdfs:label "Cityscapes"@en ,
+                                           "ГородскиеПейзажи"@ru ;
+                                owl:sameAs "http://vocab.getty.edu/page/aat/300015571"@ru ,
+                                           "http://vocab.getty.edu/page/tgn/7008136 [London]"^^xsd:anyURI ,
+                                           "http://vocab.getty.edu/page/tgn/7011913 [Thames]"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#coat_of_arms
+landscape_engravings:coat_of_arms rdf:type owl:Class ;
+                                  rdfs:subClassOf landscape_engravings:information_form_components ;
+                                  rdfs:label "CoatOfArms"@en ,
+                                             "Гербы"@ru ;
+                                  owl:sameAs "http://vocab.getty.edu/page/aat/300126352"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#copyright
+landscape_engravings:copyright rdf:type owl:Class ;
+                               rdfs:subClassOf landscape_engravings:information_form_components ;
+                               rdfs:label "Copyrights"@en ,
+                                          "Копирайты"@ru ;
+                               owl:sameAs "http://vocab.getty.edu/page/aat/300435434"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#counties
+landscape_engravings:counties rdf:type owl:Class ;
+                              rdfs:subClassOf landscape_engravings:geografical_obgects ;
+                              rdfs:label "Counties"@en ,
+                                         "Графства"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#countries
+landscape_engravings:countries rdf:type owl:Class ;
+                               rdfs:subClassOf landscape_engravings:geografical_obgects ;
+                               rdfs:label "Cтраны"@ru ,
+                                          "Сountries"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#decorative_arts
+landscape_engravings:decorative_arts rdf:type owl:Class ;
+                                     rdfs:subClassOf landscape_engravings:objects_facet ;
+                                     rdfs:label "DecorativeArts"@en ,
+                                                "ПрикладноеИскусство"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#dedication
+landscape_engravings:dedication rdf:type owl:Class ;
+                                rdfs:subClassOf landscape_engravings:information_form_components ;
+                                rdfs:label "Dedications"@en ,
+                                           "Посвящения"@ru ;
+                                owl:sameAs "http://vocab.getty.edu/page/aat/300404460"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#dishes
+landscape_engravings:dishes rdf:type owl:Class ;
+                            rdfs:subClassOf landscape_engravings:porcelain ;
+                            rdfs:label "Dishes"@en ,
+                                       "Блюда"@ru ;
+                            owl:sameAs "http://vocab.getty.edu/page/aat/300042973"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#drawings
+landscape_engravings:drawings rdf:type owl:Class ;
+                              rdfs:subClassOf landscape_engravings:visual_works ;
+                              rdfs:label "Drawings"@en ,
+                                         "Рисунки"@ru ;
+                              owl:sameAs "http://vocab.getty.edu/page/aat/300033973"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#geografical_obgects
+landscape_engravings:geografical_obgects rdf:type owl:Class ;
+                                         rdfs:label "GeograficalObjects"@en ,
+                                                    "ГеографическиеОбъекты"@ru ;
+                                         owl:sameAs "http://vocab.getty.edu/page/aat/300387698"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#imprints
+landscape_engravings:imprints rdf:type owl:Class ;
+                              rdfs:subClassOf landscape_engravings:information_form_components ;
+                              rdfs:label "Aдреса"@ru ,
+                                         "Imprints"@en ;
+                              owl:sameAs "http://vocab.getty.edu/page/aat/300202362"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#indusrtial_structures
+landscape_engravings:indusrtial_structures rdf:type owl:Class ;
+                                           rdfs:subClassOf landscape_engravings:landmarks ;
+                                           rdfs:comment "technological, industrial facilities and bridges"@en ,
+                                                        "технологические, промышленные объекты и мосты"@ru ;
+                                           rdfs:label "IndustrialStructures"@en ,
+                                                      "ТехнологическиеОбъекты"@ru ;
+                                           owl:sameAs "http://vocab.getty.edu/page/aat/300121918"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#information_form_components
+landscape_engravings:information_form_components rdf:type owl:Class ;
+                                                 rdfs:comment "Класс включает информацию, указанную на гравюре в виде надписей, подписей и прочих лексических или символических объектов, таких как герб, номер листа серии гравюр."@ru ;
+                                                 rdfs:label "InformationFormComponents"@en ,
+                                                            "НадписиПодписиЗнаки"@ru ;
+                                                 owl:sameAs "http://vocab.getty.edu/page/aat/300201262"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#landmarks
+landscape_engravings:landmarks rdf:type owl:Class ;
+                               rdfs:label "Landmarks"@en ,
+                                          "Достопримечательности"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#manufacturies
+landscape_engravings:manufacturies rdf:type owl:Class ;
+                                   rdfs:subClassOf landscape_engravings:organisations ;
+                                   rdfs:label "Manufacuties"@en ,
+                                              "ФирмыПроизводители"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#materials
+landscape_engravings:materials rdf:type owl:Class ;
+                               rdfs:comment """equivalent to Getty AAT ID: 300264091
+http://vocab.getty.edu/page/aat/300264091"""@en ;
+                               rdfs:label "Materials"@en ,
+                                          "Материалы"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#museums
+landscape_engravings:museums rdf:type owl:Class ;
+                             rdfs:subClassOf landscape_engravings:organisations ;
+                             rdfs:label "Museums"@en ,
+                                        "Музеи"@ru ;
+                             owl:sameAs "http://vocab.getty.edu/page/aat/300312281"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#natural_landscapes
+landscape_engravings:natural_landscapes rdf:type owl:Class ;
+                                        rdfs:subClassOf landscape_engravings:landmarks ;
+                                        rdfs:label "NaturalLandscapes"@en ,
+                                                   "ПриродныеОбъекты"@ru ;
+                                        owl:sameAs "http://vocab.getty.edu/page/aat/300132294"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#numerals
+landscape_engravings:numerals rdf:type owl:Class ;
+                              rdfs:subClassOf landscape_engravings:information_form_components ;
+                              rdfs:label "Numerals"@en ,
+                                         "Номера"@ru ;
+                              owl:sameAs "http://vocab.getty.edu/page/aat/300194307"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#objects_facet
+landscape_engravings:objects_facet rdf:type owl:Class ;
+                                   rdfs:label "ObjectsFacet"@en ,
+                                              "ПроизведенияИскусства"@ru ;
+                                   owl:sameAs "http://vocab.getty.edu/page/aat/300264092"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#organisations
+landscape_engravings:organisations rdf:type owl:Class ;
+                                   rdfs:label "Organizations"@en ,
+                                              "Организации"@ru ;
+                                   owl:sameAs "http://vocab.getty.edu/page/aat/300026004"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#paintings
+landscape_engravings:paintings rdf:type owl:Class ;
+                               rdfs:subClassOf landscape_engravings:visual_works ;
+                               rdfs:label "Paintings"@en ,
+                                          "Живопись"@ru ;
+                               owl:sameAs "http://vocab.getty.edu/page/aat/300033618"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#parks_country_seats
+landscape_engravings:parks_country_seats rdf:type owl:Class ;
+                                         rdfs:subClassOf landscape_engravings:landmarks ;
+                                         rdfs:label "ParksCountrySeats"@en ,
+                                                    "ПаркиУсадьбы"@ru ;
+                                         owl:sameAs """http://vocab.getty.edu/page/aat/300443493 [country parks]
+http://vocab.getty.edu/page/aat/300005567 [country houses]"""^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#people
+landscape_engravings:people rdf:type owl:Class ;
+                            rdfs:subClassOf owl:Thing ;
+                            rdfs:label "People"@en ,
+                                       "Персоналии"@ru ;
+                            owl:sameAs "http://vocab.getty.edu/page/aat/300024979"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#plates
+landscape_engravings:plates rdf:type owl:Class ;
+                            rdfs:subClassOf landscape_engravings:porcelain ;
+                            rdfs:label "Plates"@en ,
+                                       "Тарелки"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#porcelain
+landscape_engravings:porcelain rdf:type owl:Class ;
+                               rdfs:subClassOf landscape_engravings:decorative_arts ;
+                               rdfs:label "Porcelain"@en ,
+                                          "Фарфор"@ru ;
+                               owl:sameAs "https://www.getty.edu/vow/AATFullDisplay?find=porcelain&logic=AND&note=&english=N&prev_page=1&subjectid=300386874"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#prints
+landscape_engravings:prints rdf:type owl:Class ;
+                            rdfs:subClassOf landscape_engravings:visual_works ;
+                            rdfs:label "Prints"@en ,
+                                       "Гравюры"@ru ;
+                            owl:sameAs "http://vocab.getty.edu/page/aat/300041273"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#prototypes
+landscape_engravings:prototypes rdf:type owl:Class ;
+                                rdfs:subClassOf landscape_engravings:visual_works ;
+                                rdfs:label "Prototypes"@en ,
+                                           "Прототипы"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#salad_bowls
+landscape_engravings:salad_bowls rdf:type owl:Class ;
+                                 rdfs:subClassOf landscape_engravings:porcelain ;
+                                 rdfs:label "SaladBowls"@en ,
+                                            "Салатники"@ru ;
+                                 owl:sameAs "http://vocab.getty.edu/page/aat/300042966"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#series
+landscape_engravings:series rdf:type owl:Class ;
+                            rdfs:label "Series"@en ,
+                                       "Комплекты"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#series_of_prints
+landscape_engravings:series_of_prints rdf:type owl:Class ;
+                                      rdfs:subClassOf landscape_engravings:series ;
+                                      rdfs:label "series of prints"@en ,
+                                                 "СерииГравюр"@ru ;
+                                      owl:sameAs "http://vocab.getty.edu/page/aat/300027349"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#servises
+landscape_engravings:servises rdf:type owl:Class ;
+                              rdfs:subClassOf landscape_engravings:series ;
+                              rdfs:label "Cервизы"@ru ,
+                                         "Services"@en ;
+                              owl:sameAs "http://vocab.getty.edu/page/aat/300236054"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#signatures
+landscape_engravings:signatures rdf:type owl:Class ;
+                                rdfs:subClassOf landscape_engravings:information_form_components ;
+                                rdfs:label "Signatures"@en ,
+                                           "Подписи"@ru ;
+                                owl:sameAs "http://vocab.getty.edu/page/aat/300206223"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#social_institutions
+landscape_engravings:social_institutions rdf:type owl:Class ;
+                                         rdfs:subClassOf landscape_engravings:organisations ;
+                                         rdfs:label "SocialInstitutions"@en ,
+                                                    "СоциальныеИнституции"@ru ;
+                                         owl:sameAs "http://vocab.getty.edu/page/aat/300026008"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#souceboats
+landscape_engravings:souceboats rdf:type owl:Class ;
+                                rdfs:subClassOf landscape_engravings:porcelain ;
+                                rdfs:label "Souceboats"@en ,
+                                           "Соусники"@ru ;
+                                owl:sameAs "http://vocab.getty.edu/page/aat/300218762"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#titles
+landscape_engravings:titles rdf:type owl:Class ;
+                            rdfs:subClassOf landscape_engravings:information_form_components ;
+                            rdfs:label "Titles"@en ,
+                                       "Названия"@ru ;
+                            owl:sameAs "http://vocab.getty.edu/page/aat/300195168"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#trays
+landscape_engravings:trays rdf:type owl:Class ;
+                           rdfs:subClassOf landscape_engravings:porcelain ;
+                           rdfs:label "Trays"@en ,
+                                      "Лотки"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#visual_works
+landscape_engravings:visual_works rdf:type owl:Class ;
+                                  rdfs:subClassOf landscape_engravings:objects_facet ;
+                                  rdfs:label "VisualWorks"@en ,
+                                             "ИзобразительноеИскусство"@ru ;
+                                  owl:sameAs "http://vocab.getty.edu/page/aat/300191086"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Поддон
+landscape_engravings:Поддон rdf:type owl:Class ;
+                            rdfs:subClassOf landscape_engravings:porcelain ;
+                            rdfs:comment "Поддоны"@ru .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#A_South-West_View_of_Chatsworth
+landscape_engravings:A_South-West_View_of_Chatsworth rdf:type owl:NamedIndividual ,
+                                                              landscape_engravings:prints ;
+                                                     landscape_engravings:OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230 landscape_engravings:Чатсворт_хаус ;
+                                                     landscape_engravings:is_source_of landscape_engravings:Блюдо2 ;
+                                                     landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "1873,0809.408"^^xsd:string ;
+                                                     landscape_engravings:OWLDataProperty_d50d203d_831e_44fd_a76d_0d7f09eb1cc6 "1744"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                     rdfs:label "A South-West View of Chatsworth & a beautiful Seat of his Grace the Duke of Devonshire"@en ,
+                                                                "Вид с юго-запада на Чатсуорт, а также на прекрасную усадьбу Его Светлости герцога Девонширского..."@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#A_view_of_Dunnington_Cliff
+landscape_engravings:A_view_of_Dunnington_Cliff rdf:type owl:NamedIndividual ,
+                                                         landscape_engravings:prints ;
+                                                landscape_engravings:OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230 landscape_engravings:Donington_Hall ,
+                                                                                                                            <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#King's_mill> ,
+                                                                                                                            <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#St_Mary_the_Virgin's_Church,_Weston-on-Trent> ;
+                                                landscape_engravings:is_source_of landscape_engravings:A_view_of_Dunnington_Cliff ;
+                                                landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                                landscape_engravings:бытьСозданнымИз landscape_engravings:Paper ;
+                                                landscape_engravings:хранитьсяВ landscape_engravings:OWLNamedIndividual_25fe7d14_0fad_49a8_bc0b_3f22593e79bd ;
+                                                landscape_engravings:Copyright "Publish'd pursuant to an Act of Parliamt."^^xsd:string ;
+                                                landscape_engravings:Data "Augt: 25 1765"^^xsd:string ;
+                                                landscape_engravings:Dedication "belonging to the Right Honourable the Earl of Huntingdon, to whom this Plate is inscrib’d by his Lordships most Duitiful and most humble serv.t  T. Smith"^^xsd:string ;
+                                                landscape_engravings:Number "No. 1."^^xsd:string ;
+                                                landscape_engravings:OWLDataProperty_16df6be8_51ba_4576_8864_428c689924a5 "54.5"^^xsd:float ;
+                                                landscape_engravings:OWLDataProperty_1a1a4c42_20b6_44c0_99eb_6d5307dcfddd "39.4"^^xsd:float ;
+                                                landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "1877,0609.1935"^^xsd:string ;
+                                                landscape_engravings:Title "A view of Dunnington Cliff &c / On the River Trent, (five Miles South East of Derby)"^^xsd:string ;
+                                                landscape_engravings:Подпись "F Vivares Sculp."^^xsd:string ,
+                                                                             "T Smith Pinx"^^xsd:string ,
+                                                                             "Viuares fecit"^^xsd:string ;
+                                                landscape_engravings:дата_издания "1765"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                landscape_engravings:прямоугольная "true"^^xsd:boolean ;
+                                                rdfs:label "A view of Dunnington Cliff"@en ,
+                                                           "Вид холма Даннингтон"@ru ;
+                                                owl:sameAs "https://www.wikidata.org/wiki/Q110112172"^^xsd:string .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Canvas
+landscape_engravings:Canvas rdf:type owl:NamedIndividual ,
+                                     landscape_engravings:materials ;
+                            rdfs:label "Canvas"@en ,
+                                       "Холст"@ru ;
+                            owl:sameAs "http://vocab.getty.edu/page/aat/300014078"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Derby_Museum_and_Art_Gallery
+landscape_engravings:Derby_Museum_and_Art_Gallery rdf:type owl:NamedIndividual ,
+                                                           landscape_engravings:museums ;
+                                                  landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_4ec117e8_8abc_4e22_81f5_c909b5994653 ;
+                                                  rdfs:label "Derby Museum & Art Gallery"@en ,
+                                                             "Музей и художественная галерея Дерби"@ru ;
+                                                  owl:sameAs "https://www.wikidata.org/wiki/Q8012"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Derby_museums_Trust
+landscape_engravings:Derby_museums_Trust rdf:type owl:NamedIndividual ,
+                                                  landscape_engravings:museums ;
+                                         landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_4ec117e8_8abc_4e22_81f5_c909b5994653 .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Donington_Hall
+landscape_engravings:Donington_Hall rdf:type owl:NamedIndividual ,
+                                             landscape_engravings:parks_country_seats ;
+                                    landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                    landscape_engravings:иметьВладельца landscape_engravings:Theophilus_Hastings ;
+                                    landscape_engravings:OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b "-1.3771"^^xsd:float ;
+                                    landscape_engravings:OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa "52.8376"^^xsd:float ;
+                                    rdfs:label "Donington Hall"@en ;
+                                    owl:sameAs "https://www.wikidata.org/wiki/Q5296121"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Earthenware
+landscape_engravings:Earthenware rdf:type owl:NamedIndividual ,
+                                          landscape_engravings:materials ;
+                                 rdfs:label "Earthenware"@en ,
+                                            "Фаянс"@ru ;
+                                 owl:sameAs "http://vocab.getty.edu/page/aat/300140803"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Kirkstall_Abbey
+landscape_engravings:Kirkstall_Abbey rdf:type owl:NamedIndividual ,
+                                              landscape_engravings:architectual_objects ;
+                                     landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:Yorkshire ;
+                                     landscape_engravings:OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b "-1.6066"^^xsd:float ;
+                                     landscape_engravings:OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa "53.821"^^xsd:float ;
+                                     rdfs:label "Kirkstall Abbey"@en ;
+                                     owl:sameAs "https://www.wikidata.org/wiki/Q1421579"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_01974d8c_9479_4bbd_b838_48c9ebb2a448
+landscape_engravings:OWLNamedIndividual_01974d8c_9479_4bbd_b838_48c9ebb2a448 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:museums ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_aa90ec2f_bd47_4fc6_936b_12ef2c2cc2dd ;
+                                                                             rdfs:label "State Hermitage Museum"@en ,
+                                                                                        "Государственный Эрмитаж"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/cona/700065046"@en ,
+                                                                                        "https://www.wikidata.org/wiki/Q132783"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026
+landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:countries ;
+                                                                             rdfs:label "United Kingdom"@en ,
+                                                                                        "Великобритания"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/7008591"@en ,
+                                                                                        "https://www.geonames.org/2635167/united-kingdom-of-great-britain-and-northern-ireland.html"^^xsd:anyURI ,
+                                                                                        "https://www.wikidata.org/wiki/Q145"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_1a92334a_2601_43cf_99bf_20a988b85455
+landscape_engravings:OWLNamedIndividual_1a92334a_2601_43cf_99bf_20a988b85455 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:counties ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                                                             rdfs:label "Staffordshire"@en ,
+                                                                                        "Стаффордшир"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/7008174"@en ,
+                                                                                        "https://www.geonames.org/11609018/staffordshire.html"^^xsd:anyURI ,
+                                                                                        "https://www.wikidata.org/wiki/Q23105"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_1fb36869_bb63_4fcc_a5b7_54786fba0662
+landscape_engravings:OWLNamedIndividual_1fb36869_bb63_4fcc_a5b7_54786fba0662 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:social_institutions ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_3a828c78_a84e_4a0e_93e1_65841cf3d973 ;
+                                                                             rdfs:label "The British Embassy"@en ,
+                                                                                        "Посольство Великобритании"@ru ;
+                                                                             owl:sameAs "https://www.wikidata.org/wiki/Q25451964"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_25fe7d14_0fad_49a8_bc0b_3f22593e79bd
+landscape_engravings:OWLNamedIndividual_25fe7d14_0fad_49a8_bc0b_3f22593e79bd rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:museums ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_b2a92bad_dce5_4bc2_9b27_25e935a9d11c ;
+                                                                             rdfs:label "British Museum"@en ,
+                                                                                        "Британский музей"@ru ;
+                                                                             owl:sameAs "https://www.wikidata.org/wiki/Q6373"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_276dad10_5853_4ae3_a853_5417bd4e7228
+landscape_engravings:OWLNamedIndividual_276dad10_5853_4ae3_a853_5417bd4e7228 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:cities ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_3a828c78_a84e_4a0e_93e1_65841cf3d973 ;
+                                                                             rdfs:label "Helsinki"@en ,
+                                                                                        "Хельсинки"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/7009880"@en ,
+                                                                                        "https://www.geonames.org/658226/helsinki.html"^^xsd:anyURI ,
+                                                                                        "https://www.wikidata.org/wiki/Q1757"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_2c174d5a_69e0_47f6_9c6f_430edb6fa967
+landscape_engravings:OWLNamedIndividual_2c174d5a_69e0_47f6_9c6f_430edb6fa967 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:prints ;
+                                                                             landscape_engravings:OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230 landscape_engravings:OWLNamedIndividual_fd66fffb_1a3e_4a96_a9eb_9bc2cc7987c5 ;
+                                                                             landscape_engravings:is_source_of landscape_engravings:OWLNamedIndividual_6f64ebd0_3d6f_47a2_97a7_21b698bd2126 ;
+                                                                             landscape_engravings:бытьСозданнымИз landscape_engravings:Paper ;
+                                                                             landscape_engravings:хранитьсяВ landscape_engravings:OWLNamedIndividual_25fe7d14_0fad_49a8_bc0b_3f22593e79bd ;
+                                                                             landscape_engravings:Number "1"^^xsd:string ;
+                                                                             landscape_engravings:OWLDataProperty_16df6be8_51ba_4576_8864_428c689924a5 "46.2"^^xsd:float ;
+                                                                             landscape_engravings:OWLDataProperty_1a1a4c42_20b6_44c0_99eb_6d5307dcfddd "60.8"^^xsd:float ;
+                                                                             landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "1877,0609.1918"^^xsd:string ;
+                                                                             landscape_engravings:OWLDataProperty_c397fff6_5428_4a4f_a2c3_e26eb3b2180f "1769"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             landscape_engravings:Title "A/ Prospect / in Dove-Dale 3 Miles North of Ashbourn"@en ,
+                                                                                                        "Панорама в Давдейле в трёх милях к северу от Ашбурна"@ru ;
+                                                                             landscape_engravings:Адрес "J. Boydell excu.t London."@en ;
+                                                                             landscape_engravings:Подпись "A. Benoist sculp."@en ,
+                                                                                                          "T.Smith Pinx. et del."@en ;
+                                                                             rdfs:label "A Prospect in Dove-Dale 3 Miles North of Ashbourn"@en ,
+                                                                                        "Панорама в Давдейле в трёх милях к северу от Ашбурна"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_3a828c78_a84e_4a0e_93e1_65841cf3d973
+landscape_engravings:OWLNamedIndividual_3a828c78_a84e_4a0e_93e1_65841cf3d973 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:countries ;
+                                                                             rdfs:label "Finland"@en ,
+                                                                                        "Финляндия"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/1000069"@en ,
+                                                                                        "https://www.geonames.org/660013/republic-of-finland.html"^^xsd:anyURI ,
+                                                                                        "https://www.wikidata.org/wiki/Q33"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_3b2dd6d2_914b_41de_ac9f_0133ed8ec8a5
+landscape_engravings:OWLNamedIndividual_3b2dd6d2_914b_41de_ac9f_0133ed8ec8a5 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:people ;
+                                                                             landscape_engravings:OWLObjectProperty_a403a7cf_aaae_4972_b5a0_35be8e70aac6 landscape_engravings:OWLNamedIndividual_aaad56e4_4e03_4b42_a363_adf7ffd8006e ;
+                                                                             landscape_engravings:etching landscape_engravings:A_South-West_View_of_Chatsworth ,
+                                                                                                          landscape_engravings:A_view_of_Dunnington_Cliff ,
+                                                                                                          <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#The_South_East_View_of_Kirkstall_Abbey,_two_miles_from_Leeds_in_Yorkshire> ;
+                                                                             landscape_engravings:OWLDataProperty_8fc68b31_cbfc_487f_aae1_b268a8ccf2bc "1709"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             landscape_engravings:OWLDataProperty_c64012ae_d5a4_4c9b_92ee_3119555825b9 "1780"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             rdfs:label "François Vivares"@en ,
+                                                                                        "Фрэнсис Виварес"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/ulan/500013562"@en ,
+                                                                                        "https://en.wikipedia.org/wiki/François_Vivares"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_4ec117e8_8abc_4e22_81f5_c909b5994653
+landscape_engravings:OWLNamedIndividual_4ec117e8_8abc_4e22_81f5_c909b5994653 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:cities ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_677e4589_0c77_4c7f_9ce9_0d131e392c4e ;
+                                                                             rdfs:label "Derby"@en ,
+                                                                                        "Дерби"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/7026501"@en ,
+                                                                                        "https://www.geonames.org/3333142/derby.html" .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_5817a6f7_331b_493f_9b23_1c54a051b3cd
+landscape_engravings:OWLNamedIndividual_5817a6f7_331b_493f_9b23_1c54a051b3cd rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:cities ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_ecbf60fb_93be_430a_ac8a_192722610844 ;
+                                                                             rdfs:label "Soissons"@en ,
+                                                                                        "Суассон"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/7010563"@en ,
+                                                                                        "https://www.geonames.org/6425246/soissons.html"^^xsd:anyURI ,
+                                                                                        "https://www.wikidata.org/wiki/Q167152"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_677e4589_0c77_4c7f_9ce9_0d131e392c4e
+landscape_engravings:OWLNamedIndividual_677e4589_0c77_4c7f_9ce9_0d131e392c4e rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:counties ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                                                             rdfs:label "Derbyshire"@en ,
+                                                                                        "Дербишир"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/7008118"@en ,
+                                                                                        "https://www.geonames.org/11609031/derbyshire.html"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_6f64ebd0_3d6f_47a2_97a7_21b698bd2126
+landscape_engravings:OWLNamedIndividual_6f64ebd0_3d6f_47a2_97a7_21b698bd2126 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:dishes ;
+                                                                             landscape_engravings:OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230 landscape_engravings:OWLNamedIndividual_fd66fffb_1a3e_4a96_a9eb_9bc2cc7987c5 ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_01974d8c_9479_4bbd_b838_48c9ebb2a448 ;
+                                                                             landscape_engravings:OWLObjectProperty_ecc61776_28aa_4ebe_b257_23ea11b97b87 landscape_engravings:OWLNamedIndividual_8305eda4_e483_4fb1_b58a_5b50ba93f08b ;
+                                                                             landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                                                             landscape_engravings:бытьСозданнымИз landscape_engravings:Earthenware ;
+                                                                             landscape_engravings:OWLDataProperty_2b70ee2d_5201_49f8_9db8_dd5edb04e4b0 "true"^^xsd:boolean ;
+                                                                             landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "ГИКГЭ-409309"@en ;
+                                                                             landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a "Cat 96"@en ;
+                                                                             landscape_engravings:OWLDataProperty_dbdeb50c_e021_434d_93dd_c5bc7161f608 "33.0"^^xsd:float ;
+                                                                             landscape_engravings:max_data "1774"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             landscape_engravings:min_data "1770"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             rdfs:label "Блюдо"@ru ,
+                                                                                        "Блюдо круглое, с волнистым краем, с изображением пейзажа и зеленой лягушки"@ru ,
+                                                                                        "Блюдо1"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_822efec9_3f2a_48aa_9ef0_fe4c96f7540b
+landscape_engravings:OWLNamedIndividual_822efec9_3f2a_48aa_9ef0_fe4c96f7540b rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:people ;
+                                                                             landscape_engravings:creating landscape_engravings:OWLNamedIndividual_8305eda4_e483_4fb1_b58a_5b50ba93f08b ;
+                                                                             rdfs:label "Josiah Wedgwood"@en ,
+                                                                                        "Джозайя Веджвуд"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/ulan/500062605"@en ,
+                                                                                        "https://www.wikidata.org/wiki/Q319331"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_8305eda4_e483_4fb1_b58a_5b50ba93f08b
+landscape_engravings:OWLNamedIndividual_8305eda4_e483_4fb1_b58a_5b50ba93f08b rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:servises ;
+                                                                             landscape_engravings:OWLObjectProperty_6cf450a8_5bce_425b_8448_f3e9d42abdff landscape_engravings:Екатерина_II ;
+                                                                             landscape_engravings:max_data "1774"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             landscape_engravings:min_data "1773"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             rdfs:label "Green frog service"@en ,
+                                                                                        "Russian service"@en ,
+                                                                                        "Сервиз с зеленой лягушкой"@ru ;
+                                                                             owl:sameAs "https://www.wikidata.org/wiki/Q62268604"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_89b313b4_6e57_4467_80a2_7ba5d4709cec
+landscape_engravings:OWLNamedIndividual_89b313b4_6e57_4467_80a2_7ba5d4709cec rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:people ;
+                                                                             landscape_engravings:OWLObjectProperty_60900da0_a02d_4b4e_b9c5_82b7b993a5d7 landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                                                             landscape_engravings:OWLObjectProperty_a403a7cf_aaae_4972_b5a0_35be8e70aac6 landscape_engravings:OWLNamedIndividual_4ec117e8_8abc_4e22_81f5_c909b5994653 ;
+                                                                             landscape_engravings:creating landscape_engravings:OWLNamedIndividual_c18b6679_9449_4fea_8c5b_ebc68bcf71c6 ;
+                                                                             landscape_engravings:drawing <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#A_View_of_Dunnington_Cliff,_on_the_River_Trent,_five_miles_South_East_of_Derby> ;
+                                                                             landscape_engravings:painting landscape_engravings:Kirkstall_Abbey ,
+                                                                                                           landscape_engravings:OWLNamedIndividual_a71ebfed_907e_4b33_9c88_b29ecb86dbe7 ;
+                                                                             landscape_engravings:OWLDataProperty_8fc68b31_cbfc_487f_aae1_b268a8ccf2bc "1720"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             landscape_engravings:OWLDataProperty_c64012ae_d5a4_4c9b_92ee_3119555825b9 "1767"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             rdfs:label "Thomas Smith"@en ,
+                                                                                        "Томас Смит"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/ulan/500010190"@en ,
+                                                                                        "https://www.wikidata.org/wiki/Q2279147"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_a71ebfed_907e_4b33_9c88_b29ecb86dbe7
+landscape_engravings:OWLNamedIndividual_a71ebfed_907e_4b33_9c88_b29ecb86dbe7 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:paintings ;
+                                                                             landscape_engravings:OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230 landscape_engravings:OWLNamedIndividual_fd66fffb_1a3e_4a96_a9eb_9bc2cc7987c5 ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_1fb36869_bb63_4fcc_a5b7_54786fba0662 ;
+                                                                             landscape_engravings:is_source_of landscape_engravings:OWLNamedIndividual_2c174d5a_69e0_47f6_9c6f_430edb6fa967 ;
+                                                                             landscape_engravings:бытьСозданнымИз landscape_engravings:Canvas ;
+                                                                             landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "GAC1375"@en ;
+                                                                             landscape_engravings:OWLDataProperty_d50d203d_831e_44fd_a76d_0d7f09eb1cc6 "1741"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             rdfs:label "Valley in Derbyshire"@en ,
+                                                                                        "Долина в Дербишире"@ru ;
+                                                                             owl:sameAs "https://www.wikidata.org/wiki/Q119006882"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_aa90ec2f_bd47_4fc6_936b_12ef2c2cc2dd
+landscape_engravings:OWLNamedIndividual_aa90ec2f_bd47_4fc6_936b_12ef2c2cc2dd rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:cities ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_f6156988_0753_4f59_ad58_1d3ba79b9234 ;
+                                                                             rdfs:label "Saint-Petersburg"@en ,
+                                                                                        "Санкт-Петербург"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/7018216"@en ,
+                                                                                        "https://www.geonames.org/498817/saint-petersburg.html"^^xsd:anyURI ,
+                                                                                        "https://www.wikidata.org/wiki/Q656"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_aaad56e4_4e03_4b42_a363_adf7ffd8006e
+landscape_engravings:OWLNamedIndividual_aaad56e4_4e03_4b42_a363_adf7ffd8006e rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:cities ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_ecbf60fb_93be_430a_ac8a_192722610844 ;
+                                                                             rdfs:label "Saint-Jean-du-Bruel"@en ,
+                                                                                        "Сен-Жан-дю-Брюэль"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/7608389"@en ,
+                                                                                        "https://www.geonames.org/6427027/saint-jean-du-bruel.html"^^xsd:anyURI ,
+                                                                                        "https://www.wikidata.org/wiki/Q748669"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_acfee8ae_5ef4_49f5_9bac_63cc286e5fcc
+landscape_engravings:OWLNamedIndividual_acfee8ae_5ef4_49f5_9bac_63cc286e5fcc rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:people ;
+                                                                             landscape_engravings:OWLObjectProperty_a403a7cf_aaae_4972_b5a0_35be8e70aac6 landscape_engravings:OWLNamedIndividual_677e4589_0c77_4c7f_9ce9_0d131e392c4e ;
+                                                                             landscape_engravings:creating landscape_engravings:OWLNamedIndividual_8305eda4_e483_4fb1_b58a_5b50ba93f08b ;
+                                                                             landscape_engravings:OWLDataProperty_8fc68b31_cbfc_487f_aae1_b268a8ccf2bc "1731"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ,
+                                                                                                                                                       "1780"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             rdfs:label "Thomas Bentley"@en ,
+                                                                                        "Томас Бентли"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/ulan/500043307"@en ,
+                                                                                        "https://www.wikidata.org/wiki/Q7787586"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_b2a92bad_dce5_4bc2_9b27_25e935a9d11c
+landscape_engravings:OWLNamedIndividual_b2a92bad_dce5_4bc2_9b27_25e935a9d11c rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:cities ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                                                             rdfs:label "London"@en ,
+                                                                                        "Лондон"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/7011798"@en ,
+                                                                                        "https://www.geonames.org/9499471/london.html"^^xsd:anyURI ,
+                                                                                        "https://www.wikidata.org/wiki/Q84"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_c18b6679_9449_4fea_8c5b_ebc68bcf71c6
+landscape_engravings:OWLNamedIndividual_c18b6679_9449_4fea_8c5b_ebc68bcf71c6 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:series_of_prints ;
+                                                                             landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                                                             landscape_engravings:бытьСозданнымИз landscape_engravings:Paper ;
+                                                                             landscape_engravings:OWLDataProperty_d50d203d_831e_44fd_a76d_0d7f09eb1cc6 "1743"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             landscape_engravings:Title "Eight of the most extraordinary PROSPECTS in the Mountainous / parts of Derbyshire and Staffordshire commonly call’d/ the Peak and - the Moorlands"@en ;
+                                                                             landscape_engravings:Количество "8"^^xsd:int ;
+                                                                             rdfs:label "Eight of the most extraordinary Prospects in the Mountainous parts of Derbyshire and Staffordshire commonly called the Peak and the Moorlands."@en ,
+                                                                                        "Восемь самых необычайных видов гористой части Дербишира и Стаффордшира, называемой Скалистым краем или Вересковыми пустошами"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_d0d43f64_39ef_4e45_a6ad_a8125d556c63
+landscape_engravings:OWLNamedIndividual_d0d43f64_39ef_4e45_a6ad_a8125d556c63 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:people ;
+                                                                             landscape_engravings:OWLObjectProperty_a403a7cf_aaae_4972_b5a0_35be8e70aac6 landscape_engravings:OWLNamedIndividual_5817a6f7_331b_493f_9b23_1c54a051b3cd ;
+                                                                             landscape_engravings:OWLDataProperty_8fc68b31_cbfc_487f_aae1_b268a8ccf2bc "1721"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             landscape_engravings:OWLDataProperty_c64012ae_d5a4_4c9b_92ee_3119555825b9 "1770"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                             rdfs:label "Antoine Benoist"@en ,
+                                                                                        "Антуан Бенуа"@ru ;
+                                                                             owl:sameAs "https://www.wikidata.org/wiki/Q18526511"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_ecbf60fb_93be_430a_ac8a_192722610844
+landscape_engravings:OWLNamedIndividual_ecbf60fb_93be_430a_ac8a_192722610844 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:countries ;
+                                                                             rdfs:label "France"@en ,
+                                                                                        "Франция"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/1000070"@en ,
+                                                                                        "https://www.geonames.org/3017382/republic-of-france.html"^^xsd:anyURI ,
+                                                                                        "https://www.wikidata.org/wiki/Q142"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_f6156988_0753_4f59_ad58_1d3ba79b9234
+landscape_engravings:OWLNamedIndividual_f6156988_0753_4f59_ad58_1d3ba79b9234 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:countries ;
+                                                                             rdfs:label "Russia"@en ,
+                                                                                        "Россия"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/7018214"@en ,
+                                                                                        "https://www.geonames.org/2017370/russian-federation.html"^^xsd:anyURI ,
+                                                                                        "https://www.wikidata.org/wiki/Q159"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_f9b7e0cf_a182_4f4b_9c88_7402a19ed0dd
+landscape_engravings:OWLNamedIndividual_f9b7e0cf_a182_4f4b_9c88_7402a19ed0dd rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:people ;
+                                                                             rdfs:label "John Boydell"@en ,
+                                                                                        "Джон Бойделл"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/ulan/500000875"@en ,
+                                                                                        "https://www.wikidata.org/wiki/Q321419"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLNamedIndividual_fd66fffb_1a3e_4a96_a9eb_9bc2cc7987c5
+landscape_engravings:OWLNamedIndividual_fd66fffb_1a3e_4a96_a9eb_9bc2cc7987c5 rdf:type owl:NamedIndividual ,
+                                                                                      landscape_engravings:natural_landscapes ;
+                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_677e4589_0c77_4c7f_9ce9_0d131e392c4e ;
+                                                                             landscape_engravings:OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b "-1.7747502"^^xsd:float ;
+                                                                             landscape_engravings:OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa "53.06048"^^xsd:float ;
+                                                                             rdfs:label "Dove Dale"@en ,
+                                                                                        "Дав Дэйл"@ru ;
+                                                                             owl:sameAs "http://vocab.getty.edu/page/tgn/7456362"@en ,
+                                                                                        "https://www.geonames.org/2651051/dove-dale.html"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Paper
+landscape_engravings:Paper rdf:type owl:NamedIndividual ,
+                                    landscape_engravings:materials ;
+                           rdfs:label "Paper"@en ,
+                                      "Бумага"@ru ;
+                           owl:sameAs "http://vocab.getty.edu/page/aat/300014109"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Series_of_four_of_1745
+landscape_engravings:Series_of_four_of_1745 rdf:type owl:NamedIndividual ,
+                                                     landscape_engravings:series_of_prints ;
+                                            landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                            landscape_engravings:бытьСозданнымИз landscape_engravings:Paper ;
+                                            landscape_engravings:OWLDataProperty_d50d203d_831e_44fd_a76d_0d7f09eb1cc6 "1745"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                            landscape_engravings:Количество "4"^^xsd:int .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Theophilus_Hastings
+landscape_engravings:Theophilus_Hastings rdf:type owl:NamedIndividual ,
+                                                  landscape_engravings:people ;
+                                         landscape_engravings:OWLObjectProperty_60900da0_a02d_4b4e_b9c5_82b7b993a5d7 landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                         landscape_engravings:OWLObjectProperty_a403a7cf_aaae_4972_b5a0_35be8e70aac6 landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                         landscape_engravings:OWLDataProperty_8fc68b31_cbfc_487f_aae1_b268a8ccf2bc "1696"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                         landscape_engravings:OWLDataProperty_c64012ae_d5a4_4c9b_92ee_3119555825b9 "1746"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                         Титул:звание "9th Earl of Huntingdon"^^xsd:string ;
+                                         rdfs:label "Theophilus Hastings"@en ;
+                                         owl:sameAs "https://www.wikidata.org/wiki/Q7782301"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#William_Cavendish
+landscape_engravings:William_Cavendish rdf:type owl:NamedIndividual ,
+                                                landscape_engravings:people ;
+                                       landscape_engravings:OWLObjectProperty_60900da0_a02d_4b4e_b9c5_82b7b993a5d7 landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                       landscape_engravings:OWLObjectProperty_a403a7cf_aaae_4972_b5a0_35be8e70aac6 landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                       landscape_engravings:OWLDataProperty_8fc68b31_cbfc_487f_aae1_b268a8ccf2bc "1698"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                       landscape_engravings:OWLDataProperty_c64012ae_d5a4_4c9b_92ee_3119555825b9 "1755"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                       rdfs:comment "3rd Duke of Devonshire"@en ;
+                                       rdfs:label "William Cavendish"@en ,
+                                                  "Уильям Кавендиш"@ru ;
+                                       owl:sameAs "https://www.wikidata.org/wiki/Q2400397"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Yorkshire
+landscape_engravings:Yorkshire rdf:type owl:NamedIndividual ,
+                                        landscape_engravings:counties ;
+                               landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                               rdfs:label "Yorkshire"@en ,
+                                          "Йоркшир"@ru ;
+                               owl:sameAs "http://vocab.getty.edu/page/tgn/7008171"@en ,
+                                          "https://www.wikidata.org/wiki/Q163"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Блюдо2
+landscape_engravings:Блюдо2 rdf:type owl:NamedIndividual ,
+                                     landscape_engravings:dishes ;
+                            landscape_engravings:OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230 landscape_engravings:Чатсворт_хаус ;
+                            landscape_engravings:OWLObjectProperty_ecc61776_28aa_4ebe_b257_23ea11b97b87 landscape_engravings:OWLNamedIndividual_8305eda4_e483_4fb1_b58a_5b50ba93f08b ;
+                            landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                            landscape_engravings:бытьСозданнымИз landscape_engravings:Earthenware ;
+                            landscape_engravings:OWLDataProperty_2b70ee2d_5201_49f8_9db8_dd5edb04e4b0 "true"^^xsd:boolean ;
+                            landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a "Cat. 128"^^xsd:string .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Блюдо3
+landscape_engravings:Блюдо3 rdf:type owl:NamedIndividual ,
+                                     landscape_engravings:dishes ;
+                            landscape_engravings:OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230 landscape_engravings:Kirkstall_Abbey ;
+                            landscape_engravings:OWLObjectProperty_ecc61776_28aa_4ebe_b257_23ea11b97b87 landscape_engravings:OWLNamedIndividual_8305eda4_e483_4fb1_b58a_5b50ba93f08b ;
+                            landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                            landscape_engravings:бытьСозданнымИз landscape_engravings:Earthenware ;
+                            landscape_engravings:хранитьсяВ landscape_engravings:OWLNamedIndividual_01974d8c_9479_4bbd_b838_48c9ebb2a448 ;
+                            landscape_engravings:OWLDataProperty_16df6be8_51ba_4576_8864_428c689924a5 "38.5"^^xsd:float ;
+                            landscape_engravings:OWLDataProperty_1a1a4c42_20b6_44c0_99eb_6d5307dcfddd "29.0"^^xsd:float ;
+                            landscape_engravings:OWLDataProperty_2242489b_dbbe_4098_a97d_bdfa9e3dd2c2 "true"^^xsd:boolean ;
+                            landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "ГИКГЭ-409245"@en ;
+                            landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a "cat. 37"@en ;
+                            landscape_engravings:max_data "1774"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                            landscape_engravings:min_data "1770"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                            rdfs:label "Блюдо овальное, с волнистым краем, с изображением пейзажа и зеленой лягушки"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Блюдо4
+landscape_engravings:Блюдо4 rdf:type owl:NamedIndividual ,
+                                     landscape_engravings:dishes ;
+                            landscape_engravings:OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230 <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#King's_mill> ;
+                            landscape_engravings:OWLObjectProperty_ecc61776_28aa_4ebe_b257_23ea11b97b87 landscape_engravings:OWLNamedIndividual_8305eda4_e483_4fb1_b58a_5b50ba93f08b ;
+                            landscape_engravings:is_source_of landscape_engravings:Блюдо4 ;
+                            landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                            landscape_engravings:бытьСозданнымИз landscape_engravings:Earthenware ;
+                            landscape_engravings:хранитьсяВ landscape_engravings:OWLNamedIndividual_01974d8c_9479_4bbd_b838_48c9ebb2a448 ;
+                            landscape_engravings:OWLDataProperty_16df6be8_51ba_4576_8864_428c689924a5 "41.5"^^xsd:float ;
+                            landscape_engravings:OWLDataProperty_1a1a4c42_20b6_44c0_99eb_6d5307dcfddd "32.0"^^xsd:float ;
+                            landscape_engravings:OWLDataProperty_2242489b_dbbe_4098_a97d_bdfa9e3dd2c2 "true"^^xsd:boolean ;
+                            landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "ГИКГЭ-409238"@en ;
+                            landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a "cat. 16"@en ;
+                            landscape_engravings:max_data "1774"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                            landscape_engravings:min_data "1770"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                            rdfs:label "Блюдо круглое 2"@ru ,
+                                       "Блюдо круглое, с волнистым краем, с изображением пейзажа и зеленой лягушки"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Екатерина_II
+landscape_engravings:Екатерина_II rdf:type owl:NamedIndividual ,
+                                           landscape_engravings:people ;
+                                  landscape_engravings:OWLDataProperty_8fc68b31_cbfc_487f_aae1_b268a8ccf2bc "1729"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                  landscape_engravings:OWLDataProperty_c64012ae_d5a4_4c9b_92ee_3119555825b9 "1796"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                  rdfs:label "Catherine the Great"@en ,
+                                             "Екатерина II"@ru ;
+                                  owl:sameAs "http://vocab.getty.edu/page/ulan/500257752"@en ,
+                                             "https://www.wikidata.org/wiki/Q36450"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Чатсворт_хаус
+landscape_engravings:Чатсворт_хаус rdf:type owl:NamedIndividual ,
+                                            landscape_engravings:parks_country_seats ;
+                                   landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_677e4589_0c77_4c7f_9ce9_0d131e392c4e ;
+                                   landscape_engravings:иметьВладельца landscape_engravings:William_Cavendish ;
+                                   landscape_engravings:OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b "-1.6114905"^^xsd:float ;
+                                   landscape_engravings:OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa "53.227745"^^xsd:float ;
+                                   rdfs:label "Chatsworth House"@en ,
+                                              "Чатсуорт хаус"@ru ;
+                                   owl:sameAs "http://vocab.getty.edu/page/tgn/7025163"@en ,
+                                              "https://www.wikidata.org/wiki/Q1068289"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Этрурия
+landscape_engravings:Этрурия rdf:type owl:NamedIndividual ,
+                                      landscape_engravings:manufacturies ;
+                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_1a92334a_2601_43cf_99bf_20a988b85455 ;
+                             landscape_engravings:hasContributor landscape_engravings:OWLNamedIndividual_acfee8ae_5ef4_49f5_9bac_63cc286e5fcc ;
+                             landscape_engravings:иметьОснователя landscape_engravings:OWLNamedIndividual_822efec9_3f2a_48aa_9ef0_fe4c96f7540b ;
+                             landscape_engravings:OWLDataProperty_d50d203d_831e_44fd_a76d_0d7f09eb1cc6 "1769"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                             rdfs:label "Etruria hall"@en ,
+                                        "Этрурия"@ru ;
+                             owl:sameAs "http://vocab.getty.edu/page/ulan/500524246"@en ,
+                                        "https/www.wikidata.org/wiki/Q5404899"@ru .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#A_View_of_Dunnington_Cliff,_on_the_River_Trent,_five_miles_South_East_of_Derby
+<http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#A_View_of_Dunnington_Cliff,_on_the_River_Trent,_five_miles_South_East_of_Derby> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                       landscape_engravings:drawings ;
+                                                                                                                                                              landscape_engravings:OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230 landscape_engravings:Donington_Hall ,
+                                                                                                                                                                                                                                          <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#King's_mill> ,
+                                                                                                                                                                                                                                          <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#St_Mary_the_Virgin's_Church,_Weston-on-Trent> ;
+                                                                                                                                                              landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                                                                                                                                              landscape_engravings:бытьСозданнымИз landscape_engravings:Paper ;
+                                                                                                                                                              landscape_engravings:хранитьсяВ landscape_engravings:Derby_museums_Trust ;
+                                                                                                                                                              landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "DBYMU 1939-824"^^xsd:string ;
+                                                                                                                                                              landscape_engravings:OWLDataProperty_d50d203d_831e_44fd_a76d_0d7f09eb1cc6 "1738.0"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                                                                                                              rdfs:label "A View of Dunnington Cliff, on the River Trent, five miles South East of Derby"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#King's_mill
+<http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#King's_mill> rdf:type owl:NamedIndividual ,
+                                                                                                    landscape_engravings:indusrtial_structures ;
+                                                                                           landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_677e4589_0c77_4c7f_9ce9_0d131e392c4e ;
+                                                                                           landscape_engravings:OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b "-1.3838"^^xsd:float ;
+                                                                                           landscape_engravings:OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa "52.8434"^^xsd:float ;
+                                                                                           rdfs:label "King's Mill"@en ;
+                                                                                           owl:sameAs "https://www.wikidata.org/wiki/Q6411021"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Kirkstall_Abbey,_Yorkshire
+<http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Kirkstall_Abbey,_Yorkshire> rdf:type owl:NamedIndividual ,
+                                                                                                                   landscape_engravings:paintings ;
+                                                                                                          landscape_engravings:OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230 landscape_engravings:Kirkstall_Abbey ;
+                                                                                                          landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:Derby_Museum_and_Art_Gallery ;
+                                                                                                          landscape_engravings:is_source_of <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#The_South_East_View_of_Kirkstall_Abbey,_two_miles_from_Leeds_in_Yorkshire> ;
+                                                                                                          landscape_engravings:бытьСозданнымИз landscape_engravings:Canvas ;
+                                                                                                          landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "1959-416"@en ;
+                                                                                                          rdfs:label "Kirkstall Abbey, Yorkshire"^^xsd:string ;
+                                                                                                          owl:sameAs "https://www.wikidata.org/wiki/Q119803672"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#St_Mary_the_Virgin's_Church,_Weston-on-Trent
+<http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#St_Mary_the_Virgin's_Church,_Weston-on-Trent> rdf:type owl:NamedIndividual ,
+                                                                                                                                     landscape_engravings:architectual_objects ;
+                                                                                                                            landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_677e4589_0c77_4c7f_9ce9_0d131e392c4e ;
+                                                                                                                            landscape_engravings:OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b "-1.414992"^^xsd:float ;
+                                                                                                                            landscape_engravings:OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa "52.843567"^^xsd:float ;
+                                                                                                                            rdfs:label "St Mary the Virgin's Church, Weston-on-Trent"@en ;
+                                                                                                                            owl:sameAs "https://www.wikidata.org/wiki/Q17525771"@en .
+
+
+###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#The_South_East_View_of_Kirkstall_Abbey,_two_miles_from_Leeds_in_Yorkshire
+<http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#The_South_East_View_of_Kirkstall_Abbey,_two_miles_from_Leeds_in_Yorkshire> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                  landscape_engravings:prints ;
+                                                                                                                                                         landscape_engravings:OWLObjectProperty_535ba340_0e2b_4bf1_b8c5_3ffd98cc3230 landscape_engravings:Kirkstall_Abbey ;
+                                                                                                                                                         landscape_engravings:is_source_of landscape_engravings:Блюдо3 ;
+                                                                                                                                                         landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
+                                                                                                                                                         landscape_engravings:бытьСозданнымИз landscape_engravings:Paper ;
+                                                                                                                                                         landscape_engravings:хранитьсяВ landscape_engravings:OWLNamedIndividual_25fe7d14_0fad_49a8_bc0b_3f22593e79bd ;
+                                                                                                                                                         landscape_engravings:Copyright "Published 1769 by J. Boydell Engraver in Cheapside № 90. H. Parker in Cornhill № 82. & J. Bowles № 13 in Cornhill. London."@en ;
+                                                                                                                                                         landscape_engravings:Dedication "To whom this Plate is humbly inscribd by his Lordships most Obed. Serv. T. Smith."@en ;
+                                                                                                                                                         landscape_engravings:OWLDataProperty_16df6be8_51ba_4576_8864_428c689924a5 "47.0"^^xsd:float ;
+                                                                                                                                                         landscape_engravings:OWLDataProperty_1a1a4c42_20b6_44c0_99eb_6d5307dcfddd "63.0"^^xsd:float ;
+                                                                                                                                                         landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "1880,0110.111"@en ;
+                                                                                                                                                         landscape_engravings:Title "The South East View of Kirkstall Abbey, two miles from Leeds in Yorkshire, it was founded AD 1147 be H Lacy of Pontifract for Monks of the / Cistercian Order. it belongs to ye Ka Hon the Earl of Cardigan."@en ;
+                                                                                                                                                         landscape_engravings:Подпись "F.Vivares Sculp."@en ,
+                                                                                                                                                                                      "Tho Smith Pin."@en ;
+                                                                                                                                                         landscape_engravings:дата_издания "1769"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
+                                                                                                                                                         rdfs:label "The South East View of Kirkstall Abbey, two miles from Leeds in Yorkshire"@en ,
+                                                                                                                                                                    "Юго-восточный вид Киркстольского аббатства, в двух милях от Лидса в Йоркшире..."@ru .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
