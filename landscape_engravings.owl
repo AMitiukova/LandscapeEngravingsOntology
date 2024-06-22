@@ -310,7 +310,9 @@ landscape_engravings:произвести rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#создатьПрототип
 landscape_engravings:создатьПрототип rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf landscape_engravings:creating .
+                                     rdfs:subPropertyOf landscape_engravings:creating ;
+                                     rdfs:domain landscape_engravings:people ;
+                                     rdfs:range landscape_engravings:prototypes .
 
 
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#хранитьсяВ
@@ -402,7 +404,7 @@ landscape_engravings:OWLDataProperty_2242489b_dbbe_4098_a97d_bdfa9e3dd2c2 rdf:ty
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b
 landscape_engravings:OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b rdf:type owl:DatatypeProperty ;
                                                                           rdfs:subPropertyOf landscape_engravings:OWLDataProperty_638cff13_0900_437c_96f9_458c1e18e45f ;
-                                                                          rdf:type owl:FunctionalProperty ;
+                                                                          rdfs:domain landscape_engravings:landmarks ;
                                                                           rdfs:range xsd:float ;
                                                                           rdfs:label "lng"@ru .
 
@@ -450,6 +452,7 @@ landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a rdf:ty
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_ae96adc7_e1dd_45d9_b234_14d11c786989
 landscape_engravings:OWLDataProperty_ae96adc7_e1dd_45d9_b234_14d11c786989 rdf:type owl:DatatypeProperty ;
                                                                           rdfs:subPropertyOf landscape_engravings:OWLDataProperty_c397fff6_5428_4a4f_a2c3_e26eb3b2180f ;
+                                                                          rdfs:domain landscape_engravings:objects_facet ;
                                                                           rdfs:range landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
                                                                           rdfs:label "дата_перемещения"@ru .
 
@@ -473,6 +476,7 @@ landscape_engravings:OWLDataProperty_c64012ae_d5a4_4c9b_92ee_3119555825b9 rdf:ty
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa
 landscape_engravings:OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa rdf:type owl:DatatypeProperty ;
                                                                           rdfs:subPropertyOf landscape_engravings:OWLDataProperty_638cff13_0900_437c_96f9_458c1e18e45f ;
+                                                                          rdfs:domain landscape_engravings:landmarks ;
                                                                           rdfs:range xsd:float ;
                                                                           rdfs:label "lat"@ru .
 
@@ -576,7 +580,6 @@ landscape_engravings:Персональные rdf:type owl:DatatypeProperty .
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Подпись
 landscape_engravings:Подпись rdf:type owl:DatatypeProperty ;
                              rdfs:subPropertyOf landscape_engravings:НадписиПодписиЗнаки ;
-                             rdf:type owl:FunctionalProperty ;
                              rdfs:domain landscape_engravings:signatures ;
                              rdfs:range xsd:string .
 
@@ -611,6 +614,7 @@ landscape_engravings:прямоугольная rdf:type owl:DatatypeProperty ;
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Титул/звание
 Титул:звание rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf landscape_engravings:Персональные ;
+             rdfs:domain landscape_engravings:people ;
              rdfs:range xsd:string .
 
 
@@ -1024,7 +1028,9 @@ landscape_engravings:Derby_Museum_and_Art_Gallery rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Derby_museums_Trust
 landscape_engravings:Derby_museums_Trust rdf:type owl:NamedIndividual ,
                                                   landscape_engravings:museums ;
-                                         landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_4ec117e8_8abc_4e22_81f5_c909b5994653 .
+                                         landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_4ec117e8_8abc_4e22_81f5_c909b5994653 ;
+                                         rdfs:label "Derby museum Trust"@en ,
+                                                    "Музейный фонд Дерби"@ru .
 
 
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Donington_Hall
@@ -1034,7 +1040,8 @@ landscape_engravings:Donington_Hall rdf:type owl:NamedIndividual ,
                                     landscape_engravings:иметьВладельца landscape_engravings:Theophilus_Hastings ;
                                     landscape_engravings:OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b "-1.3771"^^xsd:float ;
                                     landscape_engravings:OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa "52.8376"^^xsd:float ;
-                                    rdfs:label "Donington Hall"@en ;
+                                    rdfs:label "Donington Hall"@en ,
+                                               "Донингтон холл"@ru ;
                                     owl:sameAs "https://www.wikidata.org/wiki/Q5296121"@en .
 
 
@@ -1052,7 +1059,8 @@ landscape_engravings:Kirkstall_Abbey rdf:type owl:NamedIndividual ,
                                      landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:Yorkshire ;
                                      landscape_engravings:OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b "-1.6066"^^xsd:float ;
                                      landscape_engravings:OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa "53.821"^^xsd:float ;
-                                     rdfs:label "Kirkstall Abbey"@en ;
+                                     rdfs:label "Kirkstall Abbey"@en ,
+                                                "Киркстольское аббатство"@ru ;
                                      owl:sameAs "https://www.wikidata.org/wiki/Q1421579"@ru .
 
 
@@ -1128,11 +1136,11 @@ landscape_engravings:OWLNamedIndividual_2c174d5a_69e0_47f6_9c6f_430edb6fa967 rdf
                                                                              landscape_engravings:OWLDataProperty_1a1a4c42_20b6_44c0_99eb_6d5307dcfddd "60.8"^^xsd:float ;
                                                                              landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "1877,0609.1918"^^xsd:string ;
                                                                              landscape_engravings:OWLDataProperty_c397fff6_5428_4a4f_a2c3_e26eb3b2180f "1769"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
-                                                                             landscape_engravings:Title "A/ Prospect / in Dove-Dale 3 Miles North of Ashbourn"@en ,
-                                                                                                        "Панорама в Давдейле в трёх милях к северу от Ашбурна"@ru ;
-                                                                             landscape_engravings:Адрес "J. Boydell excu.t London."@en ;
-                                                                             landscape_engravings:Подпись "A. Benoist sculp."@en ,
-                                                                                                          "T.Smith Pinx. et del."@en ;
+                                                                             landscape_engravings:Title "A/ Prospect / in Dove-Dale 3 Miles North of Ashbourn"^^xsd:string ,
+                                                                                                        "Панорама в Давдейле в трёх милях к северу от Ашбурна"^^xsd:string ;
+                                                                             landscape_engravings:Адрес "J. Boydell excu.t London."^^xsd:string ;
+                                                                             landscape_engravings:Подпись "A. Benoist sculp."^^xsd:string ,
+                                                                                                          "T.Smith Pinx. et del."^^xsd:string ;
                                                                              rdfs:label "A Prospect in Dove-Dale 3 Miles North of Ashbourn"@en ,
                                                                                         "Панорама в Давдейле в трёх милях к северу от Ашбурна"@ru .
 
@@ -1202,12 +1210,12 @@ landscape_engravings:OWLNamedIndividual_6f64ebd0_3d6f_47a2_97a7_21b698bd2126 rdf
                                                                              landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
                                                                              landscape_engravings:бытьСозданнымИз landscape_engravings:Earthenware ;
                                                                              landscape_engravings:OWLDataProperty_2b70ee2d_5201_49f8_9db8_dd5edb04e4b0 "true"^^xsd:boolean ;
-                                                                             landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "ГИКГЭ-409309"@en ;
-                                                                             landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a "Cat 96"@en ;
+                                                                             landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "ГИКГЭ-409309"^^xsd:string ;
+                                                                             landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a "Cat 96"^^xsd:string ;
                                                                              landscape_engravings:OWLDataProperty_dbdeb50c_e021_434d_93dd_c5bc7161f608 "33.0"^^xsd:float ;
                                                                              landscape_engravings:max_data "1774"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
                                                                              landscape_engravings:min_data "1770"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
-                                                                             rdfs:label "Блюдо"@ru ,
+                                                                             rdfs:label "Round dish #1"@en ,
                                                                                         "Блюдо круглое, с волнистым краем, с изображением пейзажа и зеленой лягушки"@ru ,
                                                                                         "Блюдо1"@ru .
 
@@ -1258,7 +1266,7 @@ landscape_engravings:OWLNamedIndividual_a71ebfed_907e_4b33_9c88_b29ecb86dbe7 rdf
                                                                              landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_1fb36869_bb63_4fcc_a5b7_54786fba0662 ;
                                                                              landscape_engravings:is_source_of landscape_engravings:OWLNamedIndividual_2c174d5a_69e0_47f6_9c6f_430edb6fa967 ;
                                                                              landscape_engravings:бытьСозданнымИз landscape_engravings:Canvas ;
-                                                                             landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "GAC1375"@en ;
+                                                                             landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "GAC1375"^^xsd:string ;
                                                                              landscape_engravings:OWLDataProperty_d50d203d_831e_44fd_a76d_0d7f09eb1cc6 "1741"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
                                                                              rdfs:label "Valley in Derbyshire"@en ,
                                                                                         "Долина в Дербишире"@ru ;
@@ -1317,7 +1325,7 @@ landscape_engravings:OWLNamedIndividual_c18b6679_9449_4fea_8c5b_ebc68bcf71c6 rdf
                                                                              landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
                                                                              landscape_engravings:бытьСозданнымИз landscape_engravings:Paper ;
                                                                              landscape_engravings:OWLDataProperty_d50d203d_831e_44fd_a76d_0d7f09eb1cc6 "1743"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
-                                                                             landscape_engravings:Title "Eight of the most extraordinary PROSPECTS in the Mountainous / parts of Derbyshire and Staffordshire commonly call’d/ the Peak and - the Moorlands"@en ;
+                                                                             landscape_engravings:Title "Eight of the most extraordinary PROSPECTS in the Mountainous / parts of Derbyshire and Staffordshire commonly call’d/ the Peak and - the Moorlands"^^xsd:string ;
                                                                              landscape_engravings:Количество "8"^^xsd:int ;
                                                                              rdfs:label "Eight of the most extraordinary Prospects in the Mountainous parts of Derbyshire and Staffordshire commonly called the Peak and the Moorlands."@en ,
                                                                                         "Восемь самых необычайных видов гористой части Дербишира и Стаффордшира, называемой Скалистым краем или Вересковыми пустошами"@ru .
@@ -1389,7 +1397,9 @@ landscape_engravings:Series_of_four_of_1745 rdf:type owl:NamedIndividual ,
                                             landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
                                             landscape_engravings:бытьСозданнымИз landscape_engravings:Paper ;
                                             landscape_engravings:OWLDataProperty_d50d203d_831e_44fd_a76d_0d7f09eb1cc6 "1745"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
-                                            landscape_engravings:Количество "4"^^xsd:int .
+                                            landscape_engravings:Количество "4"^^xsd:int ;
+                                            rdfs:label "Series of four of 1745"@en ,
+                                                       "Серия из 4 гравюр 1745 года"@ru .
 
 
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Theophilus_Hastings
@@ -1400,7 +1410,8 @@ landscape_engravings:Theophilus_Hastings rdf:type owl:NamedIndividual ,
                                          landscape_engravings:OWLDataProperty_8fc68b31_cbfc_487f_aae1_b268a8ccf2bc "1696"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
                                          landscape_engravings:OWLDataProperty_c64012ae_d5a4_4c9b_92ee_3119555825b9 "1746"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
                                          Титул:звание "9th Earl of Huntingdon"^^xsd:string ;
-                                         rdfs:label "Theophilus Hastings"@en ;
+                                         rdfs:label "Theophilus Hastings"@en ,
+                                                    "Теофил Хастингс"@en ;
                                          owl:sameAs "https://www.wikidata.org/wiki/Q7782301"@en .
 
 
@@ -1435,7 +1446,9 @@ landscape_engravings:Блюдо2 rdf:type owl:NamedIndividual ,
                             landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
                             landscape_engravings:бытьСозданнымИз landscape_engravings:Earthenware ;
                             landscape_engravings:OWLDataProperty_2b70ee2d_5201_49f8_9db8_dd5edb04e4b0 "true"^^xsd:boolean ;
-                            landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a "Cat. 128"^^xsd:string .
+                            landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a "Cat. 128"^^xsd:string ;
+                            rdfs:label "Dish"@en ,
+                                       "Блюдо"@ru .
 
 
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Блюдо3
@@ -1449,11 +1462,12 @@ landscape_engravings:Блюдо3 rdf:type owl:NamedIndividual ,
                             landscape_engravings:OWLDataProperty_16df6be8_51ba_4576_8864_428c689924a5 "38.5"^^xsd:float ;
                             landscape_engravings:OWLDataProperty_1a1a4c42_20b6_44c0_99eb_6d5307dcfddd "29.0"^^xsd:float ;
                             landscape_engravings:OWLDataProperty_2242489b_dbbe_4098_a97d_bdfa9e3dd2c2 "true"^^xsd:boolean ;
-                            landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "ГИКГЭ-409245"@en ;
-                            landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a "cat. 37"@en ;
+                            landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "ГИКГЭ-409245"^^xsd:string ;
+                            landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a "cat. 37"^^xsd:string ;
                             landscape_engravings:max_data "1774"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
                             landscape_engravings:min_data "1770"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
-                            rdfs:label "Блюдо овальное, с волнистым краем, с изображением пейзажа и зеленой лягушки"@ru .
+                            rdfs:label "Oval dish"@en ,
+                                       "Блюдо овальное, с волнистым краем, с изображением пейзажа и зеленой лягушки"@ru .
 
 
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#Блюдо4
@@ -1468,11 +1482,12 @@ landscape_engravings:Блюдо4 rdf:type owl:NamedIndividual ,
                             landscape_engravings:OWLDataProperty_16df6be8_51ba_4576_8864_428c689924a5 "41.5"^^xsd:float ;
                             landscape_engravings:OWLDataProperty_1a1a4c42_20b6_44c0_99eb_6d5307dcfddd "32.0"^^xsd:float ;
                             landscape_engravings:OWLDataProperty_2242489b_dbbe_4098_a97d_bdfa9e3dd2c2 "true"^^xsd:boolean ;
-                            landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "ГИКГЭ-409238"@en ;
-                            landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a "cat. 16"@en ;
+                            landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "ГИКГЭ-409238"^^xsd:string ;
+                            landscape_engravings:OWLDataProperty_a648534c_54ef_4520_a146_f519699df31a "cat. 16"^^xsd:string ;
                             landscape_engravings:max_data "1774"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
                             landscape_engravings:min_data "1770"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
-                            rdfs:label "Блюдо круглое 2"@ru ,
+                            rdfs:label "Round dish #2"@en ,
+                                       "Блюдо круглое 2"@ru ,
                                        "Блюдо круглое, с волнистым краем, с изображением пейзажа и зеленой лягушки"@ru .
 
 
@@ -1524,7 +1539,8 @@ landscape_engravings:Этрурия rdf:type owl:NamedIndividual ,
                                                                                                                                                               landscape_engravings:хранитьсяВ landscape_engravings:Derby_museums_Trust ;
                                                                                                                                                               landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "DBYMU 1939-824"^^xsd:string ;
                                                                                                                                                               landscape_engravings:OWLDataProperty_d50d203d_831e_44fd_a76d_0d7f09eb1cc6 "1738.0"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
-                                                                                                                                                              rdfs:label "A View of Dunnington Cliff, on the River Trent, five miles South East of Derby"@en .
+                                                                                                                                                              rdfs:label "A View of Dunnington Cliff, on the River Trent, five miles South East of Derby"@en ,
+                                                                                                                                                                         "Вид холма Даннингтон на реке Трент в пяти милях Юго-Восточнее Дерби"@ru .
 
 
 ###  http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#King's_mill
@@ -1533,7 +1549,8 @@ landscape_engravings:Этрурия rdf:type owl:NamedIndividual ,
                                                                                            landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_677e4589_0c77_4c7f_9ce9_0d131e392c4e ;
                                                                                            landscape_engravings:OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b "-1.3838"^^xsd:float ;
                                                                                            landscape_engravings:OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa "52.8434"^^xsd:float ;
-                                                                                           rdfs:label "King's Mill"@en ;
+                                                                                           rdfs:label "King's Mill"@en ,
+                                                                                                      "Королевская мельница"@ru ;
                                                                                            owl:sameAs "https://www.wikidata.org/wiki/Q6411021"@en .
 
 
@@ -1544,8 +1561,9 @@ landscape_engravings:Этрурия rdf:type owl:NamedIndividual ,
                                                                                                           landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:Derby_Museum_and_Art_Gallery ;
                                                                                                           landscape_engravings:is_source_of <http://www.semanticweb.org/aleksandra/ontologies/2024/3/landscape_engravings#The_South_East_View_of_Kirkstall_Abbey,_two_miles_from_Leeds_in_Yorkshire> ;
                                                                                                           landscape_engravings:бытьСозданнымИз landscape_engravings:Canvas ;
-                                                                                                          landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "1959-416"@en ;
-                                                                                                          rdfs:label "Kirkstall Abbey, Yorkshire"^^xsd:string ;
+                                                                                                          landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "1959-416"^^xsd:string ;
+                                                                                                          rdfs:label "Kirkstall Abbey, Yorkshire"^^xsd:string ,
+                                                                                                                     "Киркстольское аббатство в Йоркшире"@ru ;
                                                                                                           owl:sameAs "https://www.wikidata.org/wiki/Q119803672"^^xsd:anyURI .
 
 
@@ -1555,7 +1573,8 @@ landscape_engravings:Этрурия rdf:type owl:NamedIndividual ,
                                                                                                                             landscape_engravings:OWLObjectProperty_9a320ed1_973f_4577_90ce_58f99cca3e0e landscape_engravings:OWLNamedIndividual_677e4589_0c77_4c7f_9ce9_0d131e392c4e ;
                                                                                                                             landscape_engravings:OWLDataProperty_2a065be0_b00d_4c6b_9994_67f7faea616b "-1.414992"^^xsd:float ;
                                                                                                                             landscape_engravings:OWLDataProperty_d1e7006d_0671_4119_a3e8_0e70e1a0e9aa "52.843567"^^xsd:float ;
-                                                                                                                            rdfs:label "St Mary the Virgin's Church, Weston-on-Trent"@en ;
+                                                                                                                            rdfs:label "St Mary the Virgin's Church, Weston-on-Trent"@en ,
+                                                                                                                                       "Церковь св. Марии в Вестон-на-Тренте"@en ;
                                                                                                                             owl:sameAs "https://www.wikidata.org/wiki/Q17525771"@en .
 
 
@@ -1567,14 +1586,14 @@ landscape_engravings:Этрурия rdf:type owl:NamedIndividual ,
                                                                                                                                                          landscape_engravings:бытьСозданнымВ landscape_engravings:OWLNamedIndividual_0f23049d_31f8_4e13_b943_6d064f878026 ;
                                                                                                                                                          landscape_engravings:бытьСозданнымИз landscape_engravings:Paper ;
                                                                                                                                                          landscape_engravings:хранитьсяВ landscape_engravings:OWLNamedIndividual_25fe7d14_0fad_49a8_bc0b_3f22593e79bd ;
-                                                                                                                                                         landscape_engravings:Copyright "Published 1769 by J. Boydell Engraver in Cheapside № 90. H. Parker in Cornhill № 82. & J. Bowles № 13 in Cornhill. London."@en ;
-                                                                                                                                                         landscape_engravings:Dedication "To whom this Plate is humbly inscribd by his Lordships most Obed. Serv. T. Smith."@en ;
+                                                                                                                                                         landscape_engravings:Copyright "Published 1769 by J. Boydell Engraver in Cheapside № 90. H. Parker in Cornhill № 82. & J. Bowles № 13 in Cornhill. London."^^xsd:string ;
+                                                                                                                                                         landscape_engravings:Dedication "To whom this Plate is humbly inscribd by his Lordships most Obed. Serv. T. Smith."^^xsd:string ;
                                                                                                                                                          landscape_engravings:OWLDataProperty_16df6be8_51ba_4576_8864_428c689924a5 "47.0"^^xsd:float ;
                                                                                                                                                          landscape_engravings:OWLDataProperty_1a1a4c42_20b6_44c0_99eb_6d5307dcfddd "63.0"^^xsd:float ;
-                                                                                                                                                         landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "1880,0110.111"@en ;
-                                                                                                                                                         landscape_engravings:Title "The South East View of Kirkstall Abbey, two miles from Leeds in Yorkshire, it was founded AD 1147 be H Lacy of Pontifract for Monks of the / Cistercian Order. it belongs to ye Ka Hon the Earl of Cardigan."@en ;
-                                                                                                                                                         landscape_engravings:Подпись "F.Vivares Sculp."@en ,
-                                                                                                                                                                                      "Tho Smith Pin."@en ;
+                                                                                                                                                         landscape_engravings:OWLDataProperty_5b3c6612_5692_48e3_9d91_17f0aaa84cee "1880,0110.111"^^xsd:string ;
+                                                                                                                                                         landscape_engravings:Title "The South East View of Kirkstall Abbey, two miles from Leeds in Yorkshire, it was founded AD 1147 be H Lacy of Pontifract for Monks of the / Cistercian Order. it belongs to ye Ka Hon the Earl of Cardigan."^^xsd:string ;
+                                                                                                                                                         landscape_engravings:Подпись "F.Vivares Sculp."^^xsd:string ,
+                                                                                                                                                                                      "Tho Smith Pin."^^xsd:string ;
                                                                                                                                                          landscape_engravings:дата_издания "1769"^^landscape_engravings:OWLDatatype_9bb8d391_acc5_4b61_b8cd_b050adb92ef7 ;
                                                                                                                                                          rdfs:label "The South East View of Kirkstall Abbey, two miles from Leeds in Yorkshire"@en ,
                                                                                                                                                                     "Юго-восточный вид Киркстольского аббатства, в двух милях от Лидса в Йоркшире..."@ru .
